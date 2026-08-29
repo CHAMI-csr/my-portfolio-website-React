@@ -10,8 +10,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left Column: Branding & Copyright */}
         <div className="text-center md:text-left space-y-2">
-          <div className="font-hn font-medium text-lg text-cream tracking-wide">
-            CHAMIKA SANDEEPA RANASINHA
+          <div className="flex items-center justify-center md:justify-start gap-2.5 font-hn font-medium text-lg text-cream tracking-wide">
+            <img src="/favicon.svg" alt="CR Logo" className="w-6 h-6 rounded-md border border-cream/15" />
+            <span>CHAMIKA SANDEEPA RANASINHA</span>
           </div>
           <p className="text-xs text-cream/50 font-light">
             Software Developer &bull; Gaming Enthusiast &bull; Built with code &amp; craft

@@ -154,12 +154,20 @@ export default function Hero() {
               e.preventDefault()
               window.scrollTo({ top: 0, behavior: 'smooth' })
             }}
-            className="anim-fade-up font-hn text-lg tracking-wider text-cream font-medium"
+            className="anim-fade-up font-hn text-lg tracking-wider text-cream font-medium flex items-center gap-3 group"
             style={{ animationDelay: '600ms' }}
           >
-            CHAMI <span className="text-cream/40 font-light">&mdash; RANASINHA</span>
+            <img
+              src="/favicon.svg"
+              alt="CR Logo"
+              className="w-8 h-8 rounded-xl border border-cream/20 shadow-lg shadow-cyan-500/10 group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="flex items-center gap-1.5">
+              <span>CHAMI</span>
+              <span className="text-cream/40 font-light">&mdash; RANASINHA</span>
+            </div>
           </a>
-          <span className="text-[10px] font-mono text-cream/40 tracking-widest uppercase mt-0.5">
+          <span className="text-[10px] font-mono text-cream/40 tracking-widest uppercase mt-0.5 ml-11">
             Software Developer &bull; Gaming Enthusiast
           </span>
         </div>

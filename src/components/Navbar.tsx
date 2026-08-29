@@ -86,12 +86,15 @@ export default function Navbar({ activeSection }: NavbarProps) {
           {/* Logo / Brand */}
           <button
             onClick={() => scrollTo('hero')}
-            className={`font-hn tracking-wider text-cream font-medium text-base sm:text-lg pointer-events-auto transition-opacity duration-300 hover:opacity-75 flex items-center gap-2 ${
+            className={`font-hn tracking-wider text-cream font-medium text-base sm:text-lg pointer-events-auto transition-opacity duration-300 hover:opacity-75 flex items-center gap-2.5 ${
               scrolled ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <span>CHAMI</span>
-            <span className="text-cream/40 font-light text-sm">&mdash; RANASINHA</span>
+            <img src="/favicon.svg" alt="CR Logo" className="w-6 h-6 rounded-md border border-cream/15 shadow-sm" />
+            <div className="flex items-center gap-1.5">
+              <span>CHAMI</span>
+              <span className="text-cream/40 font-light text-sm">&mdash; RANASINHA</span>
+            </div>
           </button>
 
           {/* Desktop Nav Items */}

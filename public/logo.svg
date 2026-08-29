@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1017" />
+      <stop offset="50%" stop-color="#060709" />
+      <stop offset="100%" stop-color="#020304" />
+    </linearGradient>
+    <linearGradient id="logoRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#efeee9" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+    <linearGradient id="logoCrFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#efeee9" />
+    </linearGradient>
+    <linearGradient id="logoAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+    <radialGradient id="logoCenterGlow" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#logoBg)" stroke="url(#logoRim)" stroke-width="14" />
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#logoCenterGlow)" />
+
+  <circle cx="96" cy="96" r="5" fill="#38bdf8" opacity="0.6" />
+  <circle cx="416" cy="96" r="5" fill="#34d399" opacity="0.6" />
+  <circle cx="96" cy="416" r="5" fill="#38bdf8" opacity="0.3" />
+  <circle cx="416" cy="416" r="5" fill="#34d399" opacity="0.3" />
+
+  <g transform="translate(-14, 0)">
+    <path
+      d="M 240 176
+         A 80 80 0 0 0 160 256
+         A 80 80 0 0 0 240 336"
+      fill="none"
+      stroke="url(#logoCrFill)"
+      stroke-width="36"
+      stroke-linecap="round"
+    />
+    <path
+      d="M 292 176 L 292 336"
+      stroke="url(#logoCrFill)"
+      stroke-width="36"
+      stroke-linecap="round"
+    />
+    <path
+      d="M 292 176
+         L 342 176
+         A 40 40 0 0 1 342 256
+         L 292 256"
+      fill="none"
+      stroke="url(#logoCrFill)"
+      stroke-width="36"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M 334 256 L 396 336"
+      stroke="url(#logoAccent)"
+      stroke-width="36"
+      stroke-linecap="round"
+    />
+  </g>
+
+  <path
+    d="M 390 120 Q 390 138 408 138 Q 390 138 390 156 Q 390 138 372 138 Q 390 138 390 120 Z"
+    fill="url(#logoAccent)"
+  />
+</svg>
