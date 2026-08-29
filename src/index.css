@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #050505;
+  color: #efeee9;
+  font-family: 'Helvetica Neue ME', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #efeee9;
+  color: #050505;
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+/* ---------- Glass & Border Utilities ---------- */
+.glass-panel {
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(239, 238, 233, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(26, 26, 26, 0.85);
+  border-color: rgba(239, 238, 233, 0.22);
+  transform: translateY(-2px);
+}
+
+/* Glow highlights */
+.glow-accent {
+  box-shadow: 0 0 25px -5px rgba(239, 238, 233, 0.15);
+}
+
+/* ---------- Hero Background & Aesthetic Patterns ---------- */
+.hero-tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(239, 238, 233, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(239, 238, 233, 0.03) 1px, transparent 1px);
+}
+
+.hero-dot-pattern {
+  background-image: radial-gradient(rgba(239, 238, 233, 0.1) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.hero-spotlight {
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(56, 189, 248, 0.08) 0%,
+    rgba(147, 51, 234, 0.05) 30%,
+    rgba(10, 10, 10, 0.8) 70%,
+    #050505 100%
+  );
+}
+
+.text-stroke-cream {
+  -webkit-text-stroke: 1.5px rgba(239, 238, 233, 0.35);
+  color: transparent;
+}
+
+/* ---------- Entrance animation keyframes ---------- */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(3vh) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes line-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.anim-fade-in {
+  animation: fade-in 1.2s ease-out both;
+}
+
+.anim-rise-in {
+  animation: rise-in 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 250ms;
+}
+
+.anim-fade-up {
+  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.anim-line {
+  transform-origin: left;
+  animation: line-grow 1.1s cubic-bezier(0.76, 0, 0.24, 1) both;
+  animation-delay: 1200ms;
+}
+
+.anim-pulse {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
+.anim-float {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+.marquee {
+  animation: marquee-scroll 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-in,
+  .anim-rise-in,
+  .anim-fade-up,
+  .anim-line,
+  .anim-pulse,
+  .anim-float,
+  .marquee {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+  }
+}
